@@ -1,23 +1,36 @@
-
 import { ACME_API_BASE } from '../constants';
-import { AcmeDoc } from '../types';
 
 export const acmeApi = {
-  async getTable(): Promise<AcmeDoc[]> {
-    const response = await fetch(`${ACME_API_BASE}/docs`);
+  async getTable(): Promise<any> {
+    const response = await fetch(`${ACME_API_BASE}/table`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({}),
+    });
     if (!response.ok) throw new Error('Failed to fetch docs table');
-    return response.json();
+    return response.json(); // Returns the array directly
   },
 
-  async getOutline(id: string): Promise<AcmeDoc> {
-    const response = await fetch(`${ACME_API_BASE}/docs/${id}`);
+  async getOutline(id: string): Promise<any> {
+    const response = await fetch(`${ACME_API_BASE}/outline`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({"fileIds": [id]}),
+    });
+
     if (!response.ok) throw new Error(`Failed to fetch outline for doc ${id}`);
-    return response.json();
+    const data = await response.json(); // MUST await here
+    return data[id]; // Extract the specific file's content
   },
 
-  async getFull(id: string): Promise<AcmeDoc> {
-    const response = await fetch(`${ACME_API_BASE}/docs/${id}/full`);
+  async getFull(id: string): Promise<any> {
+    const response = await fetch(`${ACME_API_BASE}/full`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({"fileIds": [id]}),
+    });
     if (!response.ok) throw new Error(`Failed to fetch full content for doc ${id}`);
-    return response.json();
+    const data = await response.json(); // MUST await here
+    return data[id]; // Extract the specific file's content
   }
 };

@@ -6,18 +6,18 @@ import { Turn, Role, ToolInvocation } from "../types";
 
 const getTableDeclaration: FunctionDeclaration = {
   name: 'getTable',
+  description: 'Retrieves a list of all available ACME documents with their IDs and titles.',
   parameters: {
     type: Type.OBJECT,
-    description: 'Retrieves a list of all available ACME documents with their IDs and titles.',
     properties: {},
   },
 };
 
 const getOutlineDeclaration: FunctionDeclaration = {
   name: 'getOutline',
+  description: 'Retrieves the outline (list of headings) for a specific document ID.',
   parameters: {
     type: Type.OBJECT,
-    description: 'Retrieves the metadata and outline (list of headings) for a specific document ID.',
     properties: {
       id: {
         type: Type.STRING,
@@ -30,9 +30,9 @@ const getOutlineDeclaration: FunctionDeclaration = {
 
 const getFullDeclaration: FunctionDeclaration = {
   name: 'getFull',
+  description: 'Retrieves the full markdown content of a specific document ID.',
   parameters: {
     type: Type.OBJECT,
-    description: 'Retrieves the full markdown content of a specific document ID.',
     properties: {
       id: {
         type: Type.STRING,
@@ -125,11 +125,14 @@ export class GeminiAgent {
 
             try {
               if (call.name === 'getTable') {
-                result = await acmeApi.getTable();
+                const tableData = await acmeApi.getTable();
+                result = { documents: tableData };
               } else if (call.name === 'getOutline') {
-                result = await acmeApi.getOutline(call.args.id as string);
+                const outline = await acmeApi.getOutline(call.args.id as string);
+                result = { outline: outline };  // Wrap string in object
               } else if (call.name === 'getFull') {
-                result = await acmeApi.getFull(call.args.id as string);
+                const content = await acmeApi.getFull(call.args.id as string);
+                result = { content: content };  // Wrap string in object
               }
             } catch (err: any) {
               status = 'error';
@@ -155,18 +158,30 @@ export class GeminiAgent {
             turn.tool_invocations = [...toolInvocations];
             onProgress({ ...turn });
 
-            toolResponses.push({
-              functionResponse: {
-                name: call.name,
-                response: result
-              }
-            });
+            // toolResponses.push({
+            //   functionResponse: {
+            //     name: call.name,
+            //     response: result
+            //   }
+            // });
+
+          toolResponses.push({
+            functionResponse: {
+              name: call.name,
+              response: result  // Just the raw result, not wrapped
+            }
+          });
           }
 
+          console.log('Tool responses being sent:', JSON.stringify(toolResponses, null, 2));
           // Append function call and response parts to context
           contents.push(firstCandidate.content);
           // Fixed: Function responses must be associated with the Role.USER in the contents array
-          contents.push({ role: Role.USER, parts: toolResponses });
+          // contents.push({ role: Role.USER, parts: toolResponses });
+          contents.push({ 
+              role: 'user',  // Use string literal instead of Role.USER
+              parts: toolResponses 
+            });
 
         } else {
           // No more tool calls, we have the final answer
@@ -205,17 +220,17 @@ export class GeminiAgent {
       return turn;
 
     } catch (error: any) {
-      console.error("Gemini processing error:", error);
-      const errorTurn: Turn = {
-        ...turn,
-        model_response: {
-          role: Role.MODEL,
-          content: `Error: ${error.message}. Please try again.`,
-          timestamp: new Date().toISOString(),
-        }
-      };
-      onProgress(errorTurn);
-      return errorTurn;
-    }
+    console.error("Gemini processing error:", error);
+    const errorTurn: Turn = {
+      ...turn,
+      model_response: {
+        role: Role.MODEL,
+        content: `Error: ${JSON.stringify(error, null, 2)}. Please try again.`,  // Show full error
+        timestamp: new Date().toISOString(),
+      }
+    };
+    onProgress(errorTurn);
+    return errorTurn;
+  }
   }
 }
