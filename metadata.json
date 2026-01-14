@@ -1,0 +1,5 @@
+{
+  "name": "Copy of ACME Q&A Agent",
+  "description": "A sophisticated AI agent powered by Gemini 2.5 Flash to answer questions about ACME company documentation using specialized tools.",
+  "requestFramePermissions": []
+}
