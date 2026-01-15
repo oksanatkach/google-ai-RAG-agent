@@ -158,13 +158,6 @@ export class GeminiAgent {
             turn.tool_invocations = [...toolInvocations];
             onProgress({ ...turn });
 
-            // toolResponses.push({
-            //   functionResponse: {
-            //     name: call.name,
-            //     response: result
-            //   }
-            // });
-
           toolResponses.push({
             functionResponse: {
               name: call.name,
