@@ -1,0 +1,124 @@
+{
+  "conversation_id": "conv-1768430104962",
+  "created_at": "2026-01-14T22:35:04.975Z",
+  "updated_at": "2026-01-14T22:35:14.407Z",
+  "metadata": {
+    "agent_version": "1.0.0",
+    "model": "gemini-2.5-flash",
+    "total_turns": 2,
+    "total_tool_calls": 1
+  },
+  "turns": [
+    {
+      "turn_id": 0,
+      "timestamp": "2026-01-14T22:35:04.975Z",
+      "type": "system",
+      "message": {
+        "role": "model",
+        "content": "Hello! I'm the ACME Q&A Agent. I can help you find information about company policies, product metrics, security practices, and more. What would you like to know?"
+      }
+    },
+    {
+      "turn_id": 1768430106,
+      "timestamp": "2026-01-14T22:35:06.961Z",
+      "type": "user_query",
+      "user_message": {
+        "role": "user",
+        "content": "Compare ACME to competitors",
+        "timestamp": "2026-01-14T22:35:06.961Z"
+      },
+      "tool_invocations": [
+        {
+          "invocation_id": "tool-inv-1768430108440-695",
+          "sequence": 1,
+          "tool_name": "getTable",
+          "arguments": {},
+          "invoked_at": "2026-01-14T22:35:08.440Z",
+          "completed_at": "2026-01-14T22:35:09.094Z",
+          "duration_ms": 654,
+          "status": "success",
+          "result": {
+            "documents": [
+              {
+                "fileId": "company-overview.mdc",
+                "synopsis": "An introduction to ACME Corporation, our mission, vision, and values",
+                "path": "(root)"
+              },
+              {
+                "fileId": "engineering/best-practices.mdc",
+                "synopsis": "Engineering best practices and coding standards for ACME development teams",
+                "path": "engineering"
+              },
+              {
+                "fileId": "hr/onboarding.mdc",
+                "synopsis": "New employee onboarding process and welcome guide for ACME team members",
+                "path": "hr"
+              },
+              {
+                "fileId": "marketing/brand-guidelines.mdc",
+                "synopsis": "Brand identity guidelines and visual standards for ACME Corporation",
+                "path": "marketing"
+              },
+              {
+                "fileId": "products/acme-analytics.mdc",
+                "synopsis": "Comprehensive analytics platform for data-driven business decisions",
+                "path": "products"
+              },
+              {
+                "fileId": "products/acme-cloud.mdc",
+                "synopsis": "Scalable cloud infrastructure solutions for businesses of all sizes",
+                "path": "products"
+              },
+              {
+                "fileId": "security-guidelines.mdc",
+                "synopsis": "Security guidelines and best practices for ACME systems and applications",
+                "path": "(root)"
+              },
+              {
+                "fileId": "sales/sales-process.mdc",
+                "synopsis": "Standardized sales process and methodology for ACME sales team",
+                "path": "sales"
+              },
+              {
+                "fileId": "company-metrics.mdc",
+                "synopsis": "Current ACME Corporation metrics and statistics (2024)",
+                "path": "(root)"
+              },
+              {
+                "fileId": "support/troubleshooting-guide.mdc",
+                "synopsis": "Common issues and troubleshooting solutions for ACME products",
+                "path": "support"
+              }
+            ]
+          }
+        }
+      ],
+      "model_response": {
+        "role": "model",
+        "content": "I'm sorry, but I cannot find any documentation that directly compares ACME to its competitors in the available documents.\n\nYou may want to reach out to the Sales or Marketing department for this information.",
+        "timestamp": "2026-01-14T22:35:10.593Z",
+        "metadata": {
+          "confidence": "high",
+          "reasoning": "Synthesized from document tools"
+        }
+      },
+      "turn_metadata": {
+        "total_duration_ms": 3632,
+        "tool_call_count": 1,
+        "token_usage": {
+          "prompt_tokens": 1134,
+          "completion_tokens": 41,
+          "total_tokens": 1349
+        }
+      }
+    }
+  ],
+  "conversation_metadata": {
+    "total_duration_ms": 3632,
+    "total_tokens": 1349,
+    "user_messages": 1,
+    "model_responses": 1,
+    "tool_invocations": 1,
+    "errors": []
+  }
+}

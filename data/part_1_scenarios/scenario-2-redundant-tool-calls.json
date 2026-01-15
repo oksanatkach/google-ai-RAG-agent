@@ -1,0 +1,169 @@
+{
+  "conversation_id": "conv-1768416494922",
+  "created_at": "2026-01-14T18:48:14.962Z",
+  "updated_at": "2026-01-14T18:49:02.983Z",
+  "metadata": {
+    "agent_version": "1.0.0",
+    "model": "gemini-2.5-flash",
+    "total_turns": 3,
+    "total_tool_calls": 2
+  },
+  "turns": [
+    {
+      "turn_id": 0,
+      "timestamp": "2026-01-14T18:48:14.962Z",
+      "type": "system",
+      "message": {
+        "role": "model",
+        "content": "Hello! I'm the ACME Q&A Agent. I can help you find information about company policies, product metrics, security practices, and more. What would you like to know?"
+      }
+    },
+    {
+      "turn_id": 1768416498,
+      "timestamp": "2026-01-14T18:48:18.786Z",
+      "type": "user_query",
+      "user_message": {
+        "role": "user",
+        "content": "What products does ACME offer?",
+        "timestamp": "2026-01-14T18:48:18.786Z"
+      },
+      "tool_invocations": [
+        {
+          "invocation_id": "tool-inv-1768416499840-873",
+          "sequence": 1,
+          "tool_name": "getTable",
+          "arguments": {},
+          "invoked_at": "2026-01-14T18:48:19.840Z",
+          "completed_at": "2026-01-14T18:48:21.598Z",
+          "duration_ms": 1757,
+          "status": "success",
+          "result": {
+            "documents": [
+              {
+                "fileId": "company-overview.mdc",
+                "synopsis": "An introduction to ACME Corporation, our mission, vision, and values",
+                "path": "(root)"
+              },
+              {
+                "fileId": "engineering/best-practices.mdc",
+                "synopsis": "Engineering best practices and coding standards for ACME development teams",
+                "path": "engineering"
+              },
+              {
+                "fileId": "hr/onboarding.mdc",
+                "synopsis": "New employee onboarding process and welcome guide for ACME team members",
+                "path": "hr"
+              },
+              {
+                "fileId": "marketing/brand-guidelines.mdc",
+                "synopsis": "Brand identity guidelines and visual standards for ACME Corporation",
+                "path": "marketing"
+              },
+              {
+                "fileId": "products/acme-analytics.mdc",
+                "synopsis": "Comprehensive analytics platform for data-driven business decisions",
+                "path": "products"
+              },
+              {
+                "fileId": "products/acme-cloud.mdc",
+                "synopsis": "Scalable cloud infrastructure solutions for businesses of all sizes",
+                "path": "products"
+              },
+              {
+                "fileId": "security-guidelines.mdc",
+                "synopsis": "Security guidelines and best practices for ACME systems and applications",
+                "path": "(root)"
+              },
+              {
+                "fileId": "sales/sales-process.mdc",
+                "synopsis": "Standardized sales process and methodology for ACME sales team",
+                "path": "sales"
+              },
+              {
+                "fileId": "company-metrics.mdc",
+                "synopsis": "Current ACME Corporation metrics and statistics (2024)",
+                "path": "(root)"
+              },
+              {
+                "fileId": "support/troubleshooting-guide.mdc",
+                "synopsis": "Common issues and troubleshooting solutions for ACME products",
+                "path": "support"
+              }
+            ]
+          }
+        }
+      ],
+      "model_response": {
+        "role": "model",
+        "content": "ACME offers the following products:\n\n*   **ACME Analytics**: A comprehensive analytics platform for data-driven business decisions. (Source: products/acme-analytics.mdc)\n*   **ACME Cloud**: Scalable cloud infrastructure solutions for businesses of all sizes. (Source: products/acme-cloud.mdc)",
+        "timestamp": "2026-01-14T18:48:22.761Z",
+        "metadata": {
+          "confidence": "high",
+          "reasoning": "Synthesized from document tools"
+        }
+      },
+      "turn_metadata": {
+        "total_duration_ms": 3975,
+        "tool_call_count": 1,
+        "token_usage": {
+          "prompt_tokens": 1113,
+          "completion_tokens": 71,
+          "total_tokens": 1247
+        }
+      }
+    },
+    {
+      "turn_id": 1768416522,
+      "timestamp": "2026-01-14T18:48:42.258Z",
+      "type": "user_query",
+      "user_message": {
+        "role": "user",
+        "content": "Tell me more about the first one",
+        "timestamp": "2026-01-14T18:48:42.258Z"
+      },
+      "tool_invocations": [
+        {
+          "invocation_id": "tool-inv-1768416523493-240",
+          "sequence": 1,
+          "tool_name": "getFull",
+          "arguments": {
+            "id": "products/acme-analytics.mdc"
+          },
+          "invoked_at": "2026-01-14T18:48:43.493Z",
+          "completed_at": "2026-01-14T18:48:44.078Z",
+          "duration_ms": 585,
+          "status": "success",
+          "result": {
+            "content": "# ACME Analytics Platform\n\nACME Analytics is our flagship product, providing powerful data analytics and business intelligence capabilities.\n\n## Overview\n\nTransform your raw data into actionable insights with ACME Analytics.\n\n## Key Features\n\n### Real-Time Dashboards\n\nMonitor your business metrics in real-time with customizable dashboards.\n\n### Advanced Reporting\n\nGenerate comprehensive reports with automated scheduling and distribution.\n\n### Data Integration\n\nConnect to multiple data sources including databases, APIs, and cloud services.\n\n### Predictive Analytics\n\nUse machine learning algorithms to forecast trends and identify opportunities.\n\n## Getting Started\n\n### Installation\n\nFollow these steps to set up ACME Analytics in your environment.\n\n#### System Requirements\n\n- Minimum 8GB RAM\n- 50GB available storage\n- Modern web browser\n\n#### Setup Process\n\n1. Download the installation package\n2. Run the installer\n3. Configure your data connections\n4. Set up your first dashboard\n\n## Pricing\n\nChoose the plan that best fits your needs.\n\n### Starter Plan\n\nPerfect for small businesses\n- Up to 5 users\n- Basic dashboards\n- Email support\n\n### Professional Plan\n\nFor growing teams\n- Up to 50 users\n- Advanced analytics\n- Priority support\n\n### Enterprise Plan\n\nFor large organizations\n- Unlimited users\n- Custom integrations\n- Dedicated account manager"
+          }
+        }
+      ],
+      "model_response": {
+        "role": "model",
+        "content": "ACME Analytics is our flagship product, providing powerful data analytics and business intelligence capabilities. It allows you to transform your raw data into actionable insights.\n\n**Key Features:**\n*   **Real-Time Dashboards:** Monitor business metrics in real-time with customizable dashboards.\n*   **Advanced Reporting:** Generate comprehensive reports with automated scheduling and distribution.\n*   **Data Integration:** Connect to multiple data sources including databases, APIs, and cloud services.\n*   **Predictive Analytics:** Use machine learning algorithms to forecast trends and identify opportunities.\n\n**Getting Started:**\nTo set up ACME Analytics, you need a minimum of 8GB RAM, 50GB available storage, and a modern web browser. The setup process involves downloading the installation package, running the installer, configuring data connections, and setting up your first dashboard.\n\n**Pricing:**\nACME Analytics offers three plans:\n*   **Starter Plan:** For small businesses, includes up to 5 users, basic dashboards, and email support.\n*   **Professional Plan:** For growing teams, includes up to 50 users, advanced analytics, and priority support.\n*   **Enterprise Plan:** For large organizations, includes unlimited users, custom integrations, and a dedicated account manager.\n\nSource: products/acme-analytics.mdc",
+        "timestamp": "2026-01-14T18:48:45.867Z",
+        "metadata": {
+          "confidence": "high",
+          "reasoning": "Synthesized from document tools"
+        }
+      },
+      "turn_metadata": {
+        "total_duration_ms": 3609,
+        "tool_call_count": 1,
+        "token_usage": {
+          "prompt_tokens": 1195,
+          "completion_tokens": 270,
+          "total_tokens": 1465
+        }
+      }
+    }
+  ],
+  "conversation_metadata": {
+    "total_duration_ms": 7584,
+    "total_tokens": 2712,
+    "user_messages": 2,
+    "model_responses": 2,
+    "tool_invocations": 2,
+    "errors": []
+  }
+}

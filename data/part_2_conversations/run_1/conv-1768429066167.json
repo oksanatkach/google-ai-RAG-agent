@@ -1,0 +1,154 @@
+{
+  "conversation_id": "conv-1768429066167",
+  "created_at": "2026-01-14T22:17:46.183Z",
+  "updated_at": "2026-01-14T22:17:59.202Z",
+  "metadata": {
+    "agent_version": "1.0.0",
+    "model": "gemini-2.5-flash",
+    "total_turns": 2,
+    "total_tool_calls": 3
+  },
+  "turns": [
+    {
+      "turn_id": 0,
+      "timestamp": "2026-01-14T22:17:46.183Z",
+      "type": "system",
+      "message": {
+        "role": "model",
+        "content": "Hello! I'm the ACME Q&A Agent. I can help you find information about company policies, product metrics, security practices, and more. What would you like to know?"
+      }
+    },
+    {
+      "turn_id": 1768429067,
+      "timestamp": "2026-01-14T22:17:47.168Z",
+      "type": "user_query",
+      "user_message": {
+        "role": "user",
+        "content": "What's the company mission?",
+        "timestamp": "2026-01-14T22:17:47.168Z"
+      },
+      "tool_invocations": [
+        {
+          "invocation_id": "tool-inv-1768429068321-539",
+          "sequence": 1,
+          "tool_name": "getTable",
+          "arguments": {},
+          "invoked_at": "2026-01-14T22:17:48.321Z",
+          "completed_at": "2026-01-14T22:17:48.740Z",
+          "duration_ms": 420,
+          "status": "success",
+          "result": {
+            "documents": [
+              {
+                "fileId": "company-overview.mdc",
+                "synopsis": "An introduction to ACME Corporation, our mission, vision, and values",
+                "path": "(root)"
+              },
+              {
+                "fileId": "engineering/best-practices.mdc",
+                "synopsis": "Engineering best practices and coding standards for ACME development teams",
+                "path": "engineering"
+              },
+              {
+                "fileId": "hr/onboarding.mdc",
+                "synopsis": "New employee onboarding process and welcome guide for ACME team members",
+                "path": "hr"
+              },
+              {
+                "fileId": "marketing/brand-guidelines.mdc",
+                "synopsis": "Brand identity guidelines and visual standards for ACME Corporation",
+                "path": "marketing"
+              },
+              {
+                "fileId": "products/acme-analytics.mdc",
+                "synopsis": "Comprehensive analytics platform for data-driven business decisions",
+                "path": "products"
+              },
+              {
+                "fileId": "products/acme-cloud.mdc",
+                "synopsis": "Scalable cloud infrastructure solutions for businesses of all sizes",
+                "path": "products"
+              },
+              {
+                "fileId": "security-guidelines.mdc",
+                "synopsis": "Security guidelines and best practices for ACME systems and applications",
+                "path": "(root)"
+              },
+              {
+                "fileId": "sales/sales-process.mdc",
+                "synopsis": "Standardized sales process and methodology for ACME sales team",
+                "path": "sales"
+              },
+              {
+                "fileId": "company-metrics.mdc",
+                "synopsis": "Current ACME Corporation metrics and statistics (2024)",
+                "path": "(root)"
+              },
+              {
+                "fileId": "support/troubleshooting-guide.mdc",
+                "synopsis": "Common issues and troubleshooting solutions for ACME products",
+                "path": "support"
+              }
+            ]
+          }
+        },
+        {
+          "invocation_id": "tool-inv-1768429069899-1",
+          "sequence": 2,
+          "tool_name": "getOutline",
+          "arguments": {
+            "id": "company-overview.mdc"
+          },
+          "invoked_at": "2026-01-14T22:17:49.899Z",
+          "completed_at": "2026-01-14T22:17:50.295Z",
+          "duration_ms": 397,
+          "status": "success",
+          "result": {
+            "outline": "# ACME Company Overview\n  ## Our Mission\n  ## Our Vision\n  ## Core Values\n    ### Innovation\n    ### Integrity\n    ### Excellence\n    ### Customer-Centric\n  ## Company History\n    ### The Early Years (1995-2000)\n    ### Growth Phase (2000-2010)\n    ### Modern Era (2010-Present)"
+          }
+        },
+        {
+          "invocation_id": "tool-inv-1768429071209-587",
+          "sequence": 3,
+          "tool_name": "getFull",
+          "arguments": {
+            "id": "company-overview.mdc"
+          },
+          "invoked_at": "2026-01-14T22:17:51.209Z",
+          "completed_at": "2026-01-14T22:17:51.621Z",
+          "duration_ms": 412,
+          "status": "success",
+          "result": {
+            "content": "# ACME Company Overview\n\nACME Corporation is a leading technology company specializing in innovative solutions for businesses worldwide.\n\n## Our Mission\n\nTo empower organizations with cutting-edge technology that transforms the way they work and achieve their goals.\n\n## Our Vision\n\nWe envision a future where technology seamlessly integrates into every aspect of business operations, making enterprises more efficient, productive, and successful.\n\n## Core Values\n\n### Innovation\n\nWe believe in pushing boundaries and exploring new possibilities in technology.\n\n### Integrity\n\nEthical business practices and transparency guide everything we do.\n\n### Excellence\n\nWe strive for the highest standards in all our products and services.\n\n### Customer-Centric\n\nOur customers' success is our success.\n\n## Company History\n\nACME was founded in 1995 with a simple mission: to make technology accessible and powerful for businesses of all sizes.\n\n### The Early Years (1995-2000)\n\nStarting with just five employees in a small office, we focused on delivering quality customer service.\n\n### Growth Phase (2000-2010)\n\nExpanded our product portfolio and grew to over 500 employees across multiple countries.\n\n### Modern Era (2010-Present)\n\nToday, ACME serves over 10,000 customers globally with innovative cloud-based solutions."
+          }
+        }
+      ],
+      "model_response": {
+        "role": "model",
+        "content": "ACME's mission is \"To empower organizations with cutting-edge technology that transforms the way they work and achieve their goals.\"\n\nSource: company-overview.mdc",
+        "timestamp": "2026-01-14T22:17:52.658Z",
+        "metadata": {
+          "confidence": "high",
+          "reasoning": "Synthesized from document tools"
+        }
+      },
+      "turn_metadata": {
+        "total_duration_ms": 5490,
+        "tool_call_count": 3,
+        "token_usage": {
+          "prompt_tokens": 1626,
+          "completion_tokens": 35,
+          "total_tokens": 1702
+        }
+      }
+    }
+  ],
+  "conversation_metadata": {
+    "total_duration_ms": 5490,
+    "total_tokens": 1702,
+    "user_messages": 1,
+    "model_responses": 1,
+    "tool_invocations": 3,
+    "errors": []
+  }
+}

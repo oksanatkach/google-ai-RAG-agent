@@ -1,0 +1,59 @@
+{
+  "conversation_id": "conv-1768430076372",
+  "created_at": "2026-01-14T22:34:36.387Z",
+  "updated_at": "2026-01-14T22:34:41.664Z",
+  "metadata": {
+    "agent_version": "1.0.0",
+    "model": "gemini-2.5-flash",
+    "total_turns": 2,
+    "total_tool_calls": 0
+  },
+  "turns": [
+    {
+      "turn_id": 0,
+      "timestamp": "2026-01-14T22:34:36.387Z",
+      "type": "system",
+      "message": {
+        "role": "model",
+        "content": "Hello! I'm the ACME Q&A Agent. I can help you find information about company policies, product metrics, security practices, and more. What would you like to know?"
+      }
+    },
+    {
+      "turn_id": 1768430077,
+      "timestamp": "2026-01-14T22:34:37.479Z",
+      "type": "user_query",
+      "user_message": {
+        "role": "user",
+        "content": "I need help",
+        "timestamp": "2026-01-14T22:34:37.479Z"
+      },
+      "tool_invocations": [],
+      "model_response": {
+        "role": "model",
+        "content": "I can help with that! What specifically do you need help with regarding ACME company documentation? For example, are you looking for information about:\n\n*   **Products or services?**\n*   **Company policies?**\n*   **Our team or leadership?**\n*   **Technical details?**\n*   **Something else entirely?**\n\nPlease tell me more about what you're trying to find!",
+        "timestamp": "2026-01-14T22:34:38.737Z",
+        "metadata": {
+          "confidence": "high",
+          "reasoning": "Synthesized from document tools"
+        }
+      },
+      "turn_metadata": {
+        "total_duration_ms": 1258,
+        "tool_call_count": 0,
+        "token_usage": {
+          "prompt_tokens": 744,
+          "completion_tokens": 87,
+          "total_tokens": 876
+        }
+      }
+    }
+  ],
+  "conversation_metadata": {
+    "total_duration_ms": 1258,
+    "total_tokens": 876,
+    "user_messages": 1,
+    "model_responses": 1,
+    "tool_invocations": 0,
+    "errors": []
+  }
+}

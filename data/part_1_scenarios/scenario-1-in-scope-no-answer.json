@@ -1,0 +1,124 @@
+{
+  "conversation_id": "conv-1768415883194",
+  "created_at": "2026-01-14T18:38:03.223Z",
+  "updated_at": "2026-01-14T18:38:24.611Z",
+  "metadata": {
+    "agent_version": "1.0.0",
+    "model": "gemini-2.5-flash",
+    "total_turns": 2,
+    "total_tool_calls": 1
+  },
+  "turns": [
+    {
+      "turn_id": 0,
+      "timestamp": "2026-01-14T18:38:03.223Z",
+      "type": "system",
+      "message": {
+        "role": "model",
+        "content": "Hello! I'm the ACME Q&A Agent. I can help you find information about company policies, product metrics, security practices, and more. What would you like to know?"
+      }
+    },
+    {
+      "turn_id": 1768415895,
+      "timestamp": "2026-01-14T18:38:15.071Z",
+      "type": "user_query",
+      "user_message": {
+        "role": "user",
+        "content": "What is ACME's environmental sustainability policy?",
+        "timestamp": "2026-01-14T18:38:15.071Z"
+      },
+      "tool_invocations": [
+        {
+          "invocation_id": "tool-inv-1768415896162-89",
+          "sequence": 1,
+          "tool_name": "getTable",
+          "arguments": {},
+          "invoked_at": "2026-01-14T18:38:16.162Z",
+          "completed_at": "2026-01-14T18:38:17.982Z",
+          "duration_ms": 1820,
+          "status": "success",
+          "result": {
+            "documents": [
+              {
+                "fileId": "company-overview.mdc",
+                "synopsis": "An introduction to ACME Corporation, our mission, vision, and values",
+                "path": "(root)"
+              },
+              {
+                "fileId": "engineering/best-practices.mdc",
+                "synopsis": "Engineering best practices and coding standards for ACME development teams",
+                "path": "engineering"
+              },
+              {
+                "fileId": "hr/onboarding.mdc",
+                "synopsis": "New employee onboarding process and welcome guide for ACME team members",
+                "path": "hr"
+              },
+              {
+                "fileId": "marketing/brand-guidelines.mdc",
+                "synopsis": "Brand identity guidelines and visual standards for ACME Corporation",
+                "path": "marketing"
+              },
+              {
+                "fileId": "products/acme-analytics.mdc",
+                "synopsis": "Comprehensive analytics platform for data-driven business decisions",
+                "path": "products"
+              },
+              {
+                "fileId": "products/acme-cloud.mdc",
+                "synopsis": "Scalable cloud infrastructure solutions for businesses of all sizes",
+                "path": "products"
+              },
+              {
+                "fileId": "security-guidelines.mdc",
+                "synopsis": "Security guidelines and best practices for ACME systems and applications",
+                "path": "(root)"
+              },
+              {
+                "fileId": "sales/sales-process.mdc",
+                "synopsis": "Standardized sales process and methodology for ACME sales team",
+                "path": "sales"
+              },
+              {
+                "fileId": "company-metrics.mdc",
+                "synopsis": "Current ACME Corporation metrics and statistics (2024)",
+                "path": "(root)"
+              },
+              {
+                "fileId": "support/troubleshooting-guide.mdc",
+                "synopsis": "Common issues and troubleshooting solutions for ACME products",
+                "path": "support"
+              }
+            ]
+          }
+        }
+      ],
+      "model_response": {
+        "role": "model",
+        "content": "I'm sorry, but I cannot find any documentation regarding ACME's environmental sustainability policy in the available documents.",
+        "timestamp": "2026-01-14T18:38:19.257Z",
+        "metadata": {
+          "confidence": "high",
+          "reasoning": "Synthesized from document tools"
+        }
+      },
+      "turn_metadata": {
+        "total_duration_ms": 4187,
+        "tool_call_count": 1,
+        "token_usage": {
+          "prompt_tokens": 1039,
+          "completion_tokens": 24,
+          "total_tokens": 1108
+        }
+      }
+    }
+  ],
+  "conversation_metadata": {
+    "total_duration_ms": 4187,
+    "total_tokens": 1108,
+    "user_messages": 1,
+    "model_responses": 1,
+    "tool_invocations": 1,
+    "errors": []
+  }
+}

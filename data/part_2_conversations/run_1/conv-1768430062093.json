@@ -1,0 +1,59 @@
+{
+  "conversation_id": "conv-1768430062093",
+  "created_at": "2026-01-14T22:34:22.109Z",
+  "updated_at": "2026-01-14T22:34:31.193Z",
+  "metadata": {
+    "agent_version": "1.0.0",
+    "model": "gemini-2.5-flash",
+    "total_turns": 2,
+    "total_tool_calls": 0
+  },
+  "turns": [
+    {
+      "turn_id": 0,
+      "timestamp": "2026-01-14T22:34:22.109Z",
+      "type": "system",
+      "message": {
+        "role": "model",
+        "content": "Hello! I'm the ACME Q&A Agent. I can help you find information about company policies, product metrics, security practices, and more. What would you like to know?"
+      }
+    },
+    {
+      "turn_id": 1768430063,
+      "timestamp": "2026-01-14T22:34:23.493Z",
+      "type": "user_query",
+      "user_message": {
+        "role": "user",
+        "content": "What's the capital of France?",
+        "timestamp": "2026-01-14T22:34:23.493Z"
+      },
+      "tool_invocations": [],
+      "model_response": {
+        "role": "model",
+        "content": "I can only answer questions about ACME company documentation. I cannot provide information about the capital of France.",
+        "timestamp": "2026-01-14T22:34:24.509Z",
+        "metadata": {
+          "confidence": "high",
+          "reasoning": "Synthesized from document tools"
+        }
+      },
+      "turn_metadata": {
+        "total_duration_ms": 1016,
+        "tool_call_count": 0,
+        "token_usage": {
+          "prompt_tokens": 749,
+          "completion_tokens": 21,
+          "total_tokens": 824
+        }
+      }
+    }
+  ],
+  "conversation_metadata": {
+    "total_duration_ms": 1016,
+    "total_tokens": 824,
+    "user_messages": 1,
+    "model_responses": 1,
+    "tool_invocations": 0,
+    "errors": []
+  }
+}

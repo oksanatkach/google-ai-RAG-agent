@@ -1,0 +1,154 @@
+{
+  "conversation_id": "conv-1768429134977",
+  "created_at": "2026-01-14T22:18:54.990Z",
+  "updated_at": "2026-01-14T22:19:07.781Z",
+  "metadata": {
+    "agent_version": "1.0.0",
+    "model": "gemini-2.5-flash",
+    "total_turns": 2,
+    "total_tool_calls": 3
+  },
+  "turns": [
+    {
+      "turn_id": 0,
+      "timestamp": "2026-01-14T22:18:54.990Z",
+      "type": "system",
+      "message": {
+        "role": "model",
+        "content": "Hello! I'm the ACME Q&A Agent. I can help you find information about company policies, product metrics, security practices, and more. What would you like to know?"
+      }
+    },
+    {
+      "turn_id": 1768429136,
+      "timestamp": "2026-01-14T22:18:56.407Z",
+      "type": "user_query",
+      "user_message": {
+        "role": "user",
+        "content": "Do you offer remote work?",
+        "timestamp": "2026-01-14T22:18:56.407Z"
+      },
+      "tool_invocations": [
+        {
+          "invocation_id": "tool-inv-1768429137172-599",
+          "sequence": 1,
+          "tool_name": "getTable",
+          "arguments": {},
+          "invoked_at": "2026-01-14T22:18:57.172Z",
+          "completed_at": "2026-01-14T22:18:57.603Z",
+          "duration_ms": 431,
+          "status": "success",
+          "result": {
+            "documents": [
+              {
+                "fileId": "company-overview.mdc",
+                "synopsis": "An introduction to ACME Corporation, our mission, vision, and values",
+                "path": "(root)"
+              },
+              {
+                "fileId": "engineering/best-practices.mdc",
+                "synopsis": "Engineering best practices and coding standards for ACME development teams",
+                "path": "engineering"
+              },
+              {
+                "fileId": "hr/onboarding.mdc",
+                "synopsis": "New employee onboarding process and welcome guide for ACME team members",
+                "path": "hr"
+              },
+              {
+                "fileId": "marketing/brand-guidelines.mdc",
+                "synopsis": "Brand identity guidelines and visual standards for ACME Corporation",
+                "path": "marketing"
+              },
+              {
+                "fileId": "products/acme-analytics.mdc",
+                "synopsis": "Comprehensive analytics platform for data-driven business decisions",
+                "path": "products"
+              },
+              {
+                "fileId": "products/acme-cloud.mdc",
+                "synopsis": "Scalable cloud infrastructure solutions for businesses of all sizes",
+                "path": "products"
+              },
+              {
+                "fileId": "security-guidelines.mdc",
+                "synopsis": "Security guidelines and best practices for ACME systems and applications",
+                "path": "(root)"
+              },
+              {
+                "fileId": "sales/sales-process.mdc",
+                "synopsis": "Standardized sales process and methodology for ACME sales team",
+                "path": "sales"
+              },
+              {
+                "fileId": "company-metrics.mdc",
+                "synopsis": "Current ACME Corporation metrics and statistics (2024)",
+                "path": "(root)"
+              },
+              {
+                "fileId": "support/troubleshooting-guide.mdc",
+                "synopsis": "Common issues and troubleshooting solutions for ACME products",
+                "path": "support"
+              }
+            ]
+          }
+        },
+        {
+          "invocation_id": "tool-inv-1768429139019-449",
+          "sequence": 2,
+          "tool_name": "getOutline",
+          "arguments": {
+            "id": "hr/onboarding.mdc"
+          },
+          "invoked_at": "2026-01-14T22:18:59.019Z",
+          "completed_at": "2026-01-14T22:18:59.419Z",
+          "duration_ms": 400,
+          "status": "success",
+          "result": {
+            "outline": "# ACME Employee Onboarding Guide\n  ## Welcome to ACME\n  ## Your First Day\n    ### What to Expect\n    ### Essential Information\n  ## Week 1 Schedule\n    ### Monday: Orientation\n    ### Tuesday: Team Introduction\n    ### Wednesday: Systems Training\n    ### Thursday: Shadow Session\n    ### Friday: First Assignment\n  ## Company Culture\n    ### Our Values\n    ### Communication Channels\n    ### Social Activities\n  ## Resources and Tools\n    ### Employee Portal\n    ### Internal Wiki\n    ### IT Support\n  ## Benefits Overview\n    ### Health Insurance\n    ### Retirement\n    ### Time Off\n    ### Professional Development\n  ## Your Success\n    ### 30-60-90 Day Goals\n    ### Performance Reviews\n    ### Career Growth\n  ## Questions?\n    ### Your Manager\n    ### HR Department\n    ### Onboarding Buddy"
+          }
+        },
+        {
+          "invocation_id": "tool-inv-1768429140858-160",
+          "sequence": 3,
+          "tool_name": "getFull",
+          "arguments": {
+            "id": "hr/onboarding.mdc"
+          },
+          "invoked_at": "2026-01-14T22:19:00.858Z",
+          "completed_at": "2026-01-14T22:19:01.316Z",
+          "duration_ms": 458,
+          "status": "success",
+          "result": {
+            "content": "# ACME Employee Onboarding Guide\n\nWelcome to ACME! This guide will help you get started and feel at home with our team.\n\n## Welcome to ACME\n\nWe're excited to have you join our team. This onboarding process will help you get oriented and productive quickly.\n\n## Your First Day\n\n### What to Expect\n\n- Office tour and introductions\n- Welcome meeting with your manager\n- IT setup and equipment distribution\n- Company orientation presentation\n\n### Essential Information\n\n#### Office Location\n\n123 Technology Drive\nSan Francisco, CA 94102\nMain: (415) 555-0100\n\n#### Office Hours\n\nMonday - Friday: 9:00 AM - 5:00 PM\nFlexible hours available upon request\n\n#### Parking\n\nFree parking available in the main lot. Park in designated employee spaces.\n\n## Week 1 Schedule\n\n### Monday: Orientation\n\n- Company history and culture\n- Benefits overview\n- IT setup completion\n\n### Tuesday: Team Introduction\n\n- Meet your team members\n- Learn about your role\n- Attend team meetings\n\n### Wednesday: Systems Training\n\n- CRM training\n- Internal tools walkthrough\n- Access credential setup\n\n### Thursday: Shadow Session\n\n- Shadow your manager\n- Observe daily workflows\n- Ask questions freely\n\n### Friday: First Assignment\n\n- Receive your first project\n- Begin contributing\n- Weekly check-in scheduled\n\n## Company Culture\n\n### Our Values\n\n**Innovation**: We encourage creative thinking and experimentation.\n\n**Collaboration**: Teamwork makes the dream work.\n\n**Integrity**: Honesty and transparency in all interactions.\n\n**Growth**: Continuous learning and development.\n\n### Communication Channels\n\n- **Slack**: Day-to-day communication\n- **Email**: Formal communications\n- **Zoom**: Video meetings\n- **Teams**: Project collaboration\n\n### Social Activities\n\nJoin our regular team events:\n- Monthly team lunches\n- Quarterly happy hours\n- Annual company retreat\n- Sports leagues and hobby groups\n\n## Resources and Tools\n\n### Employee Portal\n\nAccess the employee portal for:\n- Pay stubs and tax documents\n- Time-off requests\n- Benefits information\n- Company directory\n\n### Internal Wiki\n\nFind detailed documentation at wiki.acme.com\n\n### IT Support\n\nContact IT support for technical issues:\n- Email: it@acme.com\n- Extension: 2021\n- Help desk: Located on 2nd floor\n\n## Benefits Overview\n\n### Health Insurance\n\nMultiple health insurance plans available. Enroll within 30 days.\n\n### Retirement\n\n401(k) plan with company matching up to 6%.\n\n### Time Off\n\nGenerous PTO policy:\n- 15 days vacation per year\n- 10 sick days\n- 8 company holidays\n\n### Professional Development\n\n- Annual learning budget\n- Conference attendance opportunities\n- Internal training programs\n- Mentorship opportunities\n\n## Your Success\n\n### 30-60-90 Day Goals\n\nWork with your manager to set goals for your first months.\n\n### Performance Reviews\n\nQuarterly performance reviews with opportunities for feedback.\n\n### Career Growth\n\nClear paths for advancement within the organization.\n\n## Questions?\n\n### Your Manager\n\nYour manager is your first point of contact for questions.\n\n### HR Department\n\nHR is available to help with any concerns or questions.\n\n### Onboarding Buddy\n\nYou'll be paired with a buddy to help you settle in."
+          }
+        }
+      ],
+      "model_response": {
+        "role": "model",
+        "content": "ACME's onboarding guide mentions \"Flexible hours available upon request\" but does not explicitly state a remote work policy. For detailed information on remote work options, please contact the HR Department.\n\nSource: hr/onboarding.mdc",
+        "timestamp": "2026-01-14T22:19:02.699Z",
+        "metadata": {
+          "confidence": "high",
+          "reasoning": "Synthesized from document tools"
+        }
+      },
+      "turn_metadata": {
+        "total_duration_ms": 6291,
+        "tool_call_count": 3,
+        "token_usage": {
+          "prompt_tokens": 2343,
+          "completion_tokens": 48,
+          "total_tokens": 2496
+        }
+      }
+    }
+  ],
+  "conversation_metadata": {
+    "total_duration_ms": 6291,
+    "total_tokens": 2496,
+    "user_messages": 1,
+    "model_responses": 1,
+    "tool_invocations": 3,
+    "errors": []
+  }
+}

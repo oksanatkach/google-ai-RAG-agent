@@ -1,0 +1,59 @@
+{
+  "conversation_id": "conv-1768430089595",
+  "created_at": "2026-01-14T22:34:49.613Z",
+  "updated_at": "2026-01-14T22:35:00.097Z",
+  "metadata": {
+    "agent_version": "1.0.0",
+    "model": "gemini-2.5-flash",
+    "total_turns": 2,
+    "total_tool_calls": 0
+  },
+  "turns": [
+    {
+      "turn_id": 0,
+      "timestamp": "2026-01-14T22:34:49.613Z",
+      "type": "system",
+      "message": {
+        "role": "model",
+        "content": "Hello! I'm the ACME Q&A Agent. I can help you find information about company policies, product metrics, security practices, and more. What would you like to know?"
+      }
+    },
+    {
+      "turn_id": 1768430090,
+      "timestamp": "2026-01-14T22:34:50.366Z",
+      "type": "user_query",
+      "user_message": {
+        "role": "user",
+        "content": "Show me the latest updates",
+        "timestamp": "2026-01-14T22:34:50.366Z"
+      },
+      "tool_invocations": [],
+      "model_response": {
+        "role": "model",
+        "content": "To help me find the latest updates, could you please tell me what kind of updates you're interested in? For example, are you looking for product updates, company news, or something else?",
+        "timestamp": "2026-01-14T22:34:51.320Z",
+        "metadata": {
+          "confidence": "high",
+          "reasoning": "Synthesized from document tools"
+        }
+      },
+      "turn_metadata": {
+        "total_duration_ms": 954,
+        "tool_call_count": 0,
+        "token_usage": {
+          "prompt_tokens": 746,
+          "completion_tokens": 40,
+          "total_tokens": 846
+        }
+      }
+    }
+  ],
+  "conversation_metadata": {
+    "total_duration_ms": 954,
+    "total_tokens": 846,
+    "user_messages": 1,
+    "model_responses": 1,
+    "tool_invocations": 0,
+    "errors": []
+  }
+}

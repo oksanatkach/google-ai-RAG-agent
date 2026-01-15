@@ -1,0 +1,402 @@
+{
+  "conversation_id": "conv-1768430264796",
+  "created_at": "2026-01-14T22:37:44.810Z",
+  "updated_at": "2026-01-14T22:41:15.977Z",
+  "metadata": {
+    "agent_version": "1.0.0",
+    "model": "gemini-2.5-flash",
+    "total_turns": 4,
+    "total_tool_calls": 9
+  },
+  "turns": [
+    {
+      "turn_id": 0,
+      "timestamp": "2026-01-14T22:37:44.810Z",
+      "type": "system",
+      "message": {
+        "role": "model",
+        "content": "Hello! I'm the ACME Q&A Agent. I can help you find information about company policies, product metrics, security practices, and more. What would you like to know?"
+      }
+    },
+    {
+      "turn_id": 1768430325,
+      "timestamp": "2026-01-14T22:38:45.805Z",
+      "type": "user_query",
+      "user_message": {
+        "role": "user",
+        "content": "How many employees work at ACME?",
+        "timestamp": "2026-01-14T22:38:45.805Z"
+      },
+      "tool_invocations": [
+        {
+          "invocation_id": "tool-inv-1768430327074-460",
+          "sequence": 1,
+          "tool_name": "getTable",
+          "arguments": {},
+          "invoked_at": "2026-01-14T22:38:47.074Z",
+          "completed_at": "2026-01-14T22:38:47.638Z",
+          "duration_ms": 564,
+          "status": "success",
+          "result": {
+            "documents": [
+              {
+                "fileId": "company-overview.mdc",
+                "synopsis": "An introduction to ACME Corporation, our mission, vision, and values",
+                "path": "(root)"
+              },
+              {
+                "fileId": "engineering/best-practices.mdc",
+                "synopsis": "Engineering best practices and coding standards for ACME development teams",
+                "path": "engineering"
+              },
+              {
+                "fileId": "hr/onboarding.mdc",
+                "synopsis": "New employee onboarding process and welcome guide for ACME team members",
+                "path": "hr"
+              },
+              {
+                "fileId": "marketing/brand-guidelines.mdc",
+                "synopsis": "Brand identity guidelines and visual standards for ACME Corporation",
+                "path": "marketing"
+              },
+              {
+                "fileId": "products/acme-analytics.mdc",
+                "synopsis": "Comprehensive analytics platform for data-driven business decisions",
+                "path": "products"
+              },
+              {
+                "fileId": "products/acme-cloud.mdc",
+                "synopsis": "Scalable cloud infrastructure solutions for businesses of all sizes",
+                "path": "products"
+              },
+              {
+                "fileId": "security-guidelines.mdc",
+                "synopsis": "Security guidelines and best practices for ACME systems and applications",
+                "path": "(root)"
+              },
+              {
+                "fileId": "sales/sales-process.mdc",
+                "synopsis": "Standardized sales process and methodology for ACME sales team",
+                "path": "sales"
+              },
+              {
+                "fileId": "company-metrics.mdc",
+                "synopsis": "Current ACME Corporation metrics and statistics (2024)",
+                "path": "(root)"
+              },
+              {
+                "fileId": "support/troubleshooting-guide.mdc",
+                "synopsis": "Common issues and troubleshooting solutions for ACME products",
+                "path": "support"
+              }
+            ]
+          }
+        },
+        {
+          "invocation_id": "tool-inv-1768430328484-299",
+          "sequence": 2,
+          "tool_name": "getOutline",
+          "arguments": {
+            "id": "company-metrics.mdc"
+          },
+          "invoked_at": "2026-01-14T22:38:48.484Z",
+          "completed_at": "2026-01-14T22:38:48.935Z",
+          "duration_ms": 451,
+          "status": "success",
+          "result": {
+            "outline": "# ACME Company Metrics\n  ## Current Statistics (Q4 2024)\n    ### Team Size\n    ### Geographic Distribution\n    ### Customer Base\n    ### Financial Performance\n    ### Product Adoption\n  ## Growth Trajectory\n    ### Historical Milestones\n    ### Future Projections"
+          }
+        },
+        {
+          "invocation_id": "tool-inv-1768430329924-356",
+          "sequence": 3,
+          "tool_name": "getFull",
+          "arguments": {
+            "id": "company-metrics.mdc"
+          },
+          "invoked_at": "2026-01-14T22:38:49.924Z",
+          "completed_at": "2026-01-14T22:38:50.353Z",
+          "duration_ms": 429,
+          "status": "success",
+          "result": {
+            "content": "# ACME Company Metrics\n\n## Current Statistics (Q4 2024)\n\n### Team Size\n\nAs of Q4 2024, ACME has grown substantially:\n- Total Employees: 1,200\n- Engineering: 450\n- Sales: 200  \n- Support: 150\n- Marketing: 100\n- Operations: 150\n- Other departments: 150\n\n### Geographic Distribution\n\nOur team is spread across multiple locations:\n- San Francisco HQ: 600 employees\n- New York Office: 300 employees\n- London Office: 200 employees\n- Remote workers: 100 employees\n\n### Customer Base\n\n- Active Customers: 10,000+\n- Enterprise Clients: 250\n- Small-to-Medium Business: 3,500\n- Individual Users: 6,250+\n- Countries Served: 45\n\n### Financial Performance\n\n- Annual Revenue: $150M (2024)\n- Year-over-Year Growth: 35%\n- Customer Retention Rate: 94%\n- Net Promoter Score: 72\n\n### Product Adoption\n\n- ACME Analytics Users: 5,000+\n- ACME Cloud Customers: 3,500\n- Active Monthly Users: 8,500\n\n## Growth Trajectory\n\nACME has experienced consistent growth since our founding:\n\n### Historical Milestones\n\n- 1995-2000: Small startup, 5-50 employees\n- 2000-2010: Expansion phase, grew to 500 employees\n- 2010-2020: Maturation, reached 800 employees\n- 2020-2024: Accelerated growth, now at 1,200 employees\n\n### Future Projections\n\nBased on current growth rates, we project:\n- 2025: 1,500 employees\n- 2026: 2,000 employees\n- Customer base: 15,000+ by end of 2025"
+          }
+        }
+      ],
+      "model_response": {
+        "role": "model",
+        "content": "As of Q4 2024, ACME Corporation has 1,200 employees.\n\nSource: company-metrics.mdc",
+        "timestamp": "2026-01-14T22:38:51.439Z",
+        "metadata": {
+          "confidence": "high",
+          "reasoning": "Synthesized from document tools"
+        }
+      },
+      "turn_metadata": {
+        "total_duration_ms": 5633,
+        "tool_call_count": 3,
+        "token_usage": {
+          "prompt_tokens": 1823,
+          "completion_tokens": 31,
+          "total_tokens": 1899
+        }
+      }
+    },
+    {
+      "turn_id": 1768430359,
+      "timestamp": "2026-01-14T22:39:19.021Z",
+      "type": "user_query",
+      "user_message": {
+        "role": "user",
+        "content": "how many active customers do you have",
+        "timestamp": "2026-01-14T22:39:19.021Z"
+      },
+      "tool_invocations": [
+        {
+          "invocation_id": "tool-inv-1768430360343-512",
+          "sequence": 1,
+          "tool_name": "getTable",
+          "arguments": {},
+          "invoked_at": "2026-01-14T22:39:20.343Z",
+          "completed_at": "2026-01-14T22:39:20.880Z",
+          "duration_ms": 536,
+          "status": "success",
+          "result": {
+            "documents": [
+              {
+                "fileId": "company-overview.mdc",
+                "synopsis": "An introduction to ACME Corporation, our mission, vision, and values",
+                "path": "(root)"
+              },
+              {
+                "fileId": "engineering/best-practices.mdc",
+                "synopsis": "Engineering best practices and coding standards for ACME development teams",
+                "path": "engineering"
+              },
+              {
+                "fileId": "hr/onboarding.mdc",
+                "synopsis": "New employee onboarding process and welcome guide for ACME team members",
+                "path": "hr"
+              },
+              {
+                "fileId": "marketing/brand-guidelines.mdc",
+                "synopsis": "Brand identity guidelines and visual standards for ACME Corporation",
+                "path": "marketing"
+              },
+              {
+                "fileId": "products/acme-analytics.mdc",
+                "synopsis": "Comprehensive analytics platform for data-driven business decisions",
+                "path": "products"
+              },
+              {
+                "fileId": "products/acme-cloud.mdc",
+                "synopsis": "Scalable cloud infrastructure solutions for businesses of all sizes",
+                "path": "products"
+              },
+              {
+                "fileId": "security-guidelines.mdc",
+                "synopsis": "Security guidelines and best practices for ACME systems and applications",
+                "path": "(root)"
+              },
+              {
+                "fileId": "sales/sales-process.mdc",
+                "synopsis": "Standardized sales process and methodology for ACME sales team",
+                "path": "sales"
+              },
+              {
+                "fileId": "company-metrics.mdc",
+                "synopsis": "Current ACME Corporation metrics and statistics (2024)",
+                "path": "(root)"
+              },
+              {
+                "fileId": "support/troubleshooting-guide.mdc",
+                "synopsis": "Common issues and troubleshooting solutions for ACME products",
+                "path": "support"
+              }
+            ]
+          }
+        },
+        {
+          "invocation_id": "tool-inv-1768430361878-269",
+          "sequence": 2,
+          "tool_name": "getOutline",
+          "arguments": {
+            "id": "company-metrics.mdc"
+          },
+          "invoked_at": "2026-01-14T22:39:21.878Z",
+          "completed_at": "2026-01-14T22:39:22.339Z",
+          "duration_ms": 461,
+          "status": "success",
+          "result": {
+            "outline": "# ACME Company Metrics\n  ## Current Statistics (Q4 2024)\n    ### Team Size\n    ### Geographic Distribution\n    ### Customer Base\n    ### Financial Performance\n    ### Product Adoption\n  ## Growth Trajectory\n    ### Historical Milestones\n    ### Future Projections"
+          }
+        },
+        {
+          "invocation_id": "tool-inv-1768430363201-974",
+          "sequence": 3,
+          "tool_name": "getFull",
+          "arguments": {
+            "id": "company-metrics.mdc"
+          },
+          "invoked_at": "2026-01-14T22:39:23.201Z",
+          "completed_at": "2026-01-14T22:39:23.610Z",
+          "duration_ms": 408,
+          "status": "success",
+          "result": {
+            "content": "# ACME Company Metrics\n\n## Current Statistics (Q4 2024)\n\n### Team Size\n\nAs of Q4 2024, ACME has grown substantially:\n- Total Employees: 1,200\n- Engineering: 450\n- Sales: 200  \n- Support: 150\n- Marketing: 100\n- Operations: 150\n- Other departments: 150\n\n### Geographic Distribution\n\nOur team is spread across multiple locations:\n- San Francisco HQ: 600 employees\n- New York Office: 300 employees\n- London Office: 200 employees\n- Remote workers: 100 employees\n\n### Customer Base\n\n- Active Customers: 10,000+\n- Enterprise Clients: 250\n- Small-to-Medium Business: 3,500\n- Individual Users: 6,250+\n- Countries Served: 45\n\n### Financial Performance\n\n- Annual Revenue: $150M (2024)\n- Year-over-Year Growth: 35%\n- Customer Retention Rate: 94%\n- Net Promoter Score: 72\n\n### Product Adoption\n\n- ACME Analytics Users: 5,000+\n- ACME Cloud Customers: 3,500\n- Active Monthly Users: 8,500\n\n## Growth Trajectory\n\nACME has experienced consistent growth since our founding:\n\n### Historical Milestones\n\n- 1995-2000: Small startup, 5-50 employees\n- 2000-2010: Expansion phase, grew to 500 employees\n- 2010-2020: Maturation, reached 800 employees\n- 2020-2024: Accelerated growth, now at 1,200 employees\n\n### Future Projections\n\nBased on current growth rates, we project:\n- 2025: 1,500 employees\n- 2026: 2,000 employees\n- Customer base: 15,000+ by end of 2025"
+          }
+        }
+      ],
+      "model_response": {
+        "role": "model",
+        "content": "ACME Corporation has over 10,000 active customers as of Q4 2024.\n\nSource: company-metrics.mdc",
+        "timestamp": "2026-01-14T22:39:25.613Z",
+        "metadata": {
+          "confidence": "high",
+          "reasoning": "Synthesized from document tools"
+        }
+      },
+      "turn_metadata": {
+        "total_duration_ms": 6592,
+        "tool_call_count": 3,
+        "token_usage": {
+          "prompt_tokens": 1863,
+          "completion_tokens": 33,
+          "total_tokens": 1946
+        }
+      }
+    },
+    {
+      "turn_id": 1768430418,
+      "timestamp": "2026-01-14T22:40:18.641Z",
+      "type": "user_query",
+      "user_message": {
+        "role": "user",
+        "content": "how many employees work in New York?",
+        "timestamp": "2026-01-14T22:40:18.641Z"
+      },
+      "tool_invocations": [
+        {
+          "invocation_id": "tool-inv-1768430421170-763",
+          "sequence": 1,
+          "tool_name": "getTable",
+          "arguments": {},
+          "invoked_at": "2026-01-14T22:40:21.170Z",
+          "completed_at": "2026-01-14T22:40:21.853Z",
+          "duration_ms": 683,
+          "status": "success",
+          "result": {
+            "documents": [
+              {
+                "fileId": "company-overview.mdc",
+                "synopsis": "An introduction to ACME Corporation, our mission, vision, and values",
+                "path": "(root)"
+              },
+              {
+                "fileId": "engineering/best-practices.mdc",
+                "synopsis": "Engineering best practices and coding standards for ACME development teams",
+                "path": "engineering"
+              },
+              {
+                "fileId": "hr/onboarding.mdc",
+                "synopsis": "New employee onboarding process and welcome guide for ACME team members",
+                "path": "hr"
+              },
+              {
+                "fileId": "marketing/brand-guidelines.mdc",
+                "synopsis": "Brand identity guidelines and visual standards for ACME Corporation",
+                "path": "marketing"
+              },
+              {
+                "fileId": "products/acme-analytics.mdc",
+                "synopsis": "Comprehensive analytics platform for data-driven business decisions",
+                "path": "products"
+              },
+              {
+                "fileId": "products/acme-cloud.mdc",
+                "synopsis": "Scalable cloud infrastructure solutions for businesses of all sizes",
+                "path": "products"
+              },
+              {
+                "fileId": "security-guidelines.mdc",
+                "synopsis": "Security guidelines and best practices for ACME systems and applications",
+                "path": "(root)"
+              },
+              {
+                "fileId": "sales/sales-process.mdc",
+                "synopsis": "Standardized sales process and methodology for ACME sales team",
+                "path": "sales"
+              },
+              {
+                "fileId": "company-metrics.mdc",
+                "synopsis": "Current ACME Corporation metrics and statistics (2024)",
+                "path": "(root)"
+              },
+              {
+                "fileId": "support/troubleshooting-guide.mdc",
+                "synopsis": "Common issues and troubleshooting solutions for ACME products",
+                "path": "support"
+              }
+            ]
+          }
+        },
+        {
+          "invocation_id": "tool-inv-1768430423065-51",
+          "sequence": 2,
+          "tool_name": "getOutline",
+          "arguments": {
+            "id": "company-metrics.mdc"
+          },
+          "invoked_at": "2026-01-14T22:40:23.065Z",
+          "completed_at": "2026-01-14T22:40:23.469Z",
+          "duration_ms": 404,
+          "status": "success",
+          "result": {
+            "outline": "# ACME Company Metrics\n  ## Current Statistics (Q4 2024)\n    ### Team Size\n    ### Geographic Distribution\n    ### Customer Base\n    ### Financial Performance\n    ### Product Adoption\n  ## Growth Trajectory\n    ### Historical Milestones\n    ### Future Projections"
+          }
+        },
+        {
+          "invocation_id": "tool-inv-1768430424483-369",
+          "sequence": 3,
+          "tool_name": "getFull",
+          "arguments": {
+            "id": "company-metrics.mdc"
+          },
+          "invoked_at": "2026-01-14T22:40:24.483Z",
+          "completed_at": "2026-01-14T22:40:24.887Z",
+          "duration_ms": 404,
+          "status": "success",
+          "result": {
+            "content": "# ACME Company Metrics\n\n## Current Statistics (Q4 2024)\n\n### Team Size\n\nAs of Q4 2024, ACME has grown substantially:\n- Total Employees: 1,200\n- Engineering: 450\n- Sales: 200  \n- Support: 150\n- Marketing: 100\n- Operations: 150\n- Other departments: 150\n\n### Geographic Distribution\n\nOur team is spread across multiple locations:\n- San Francisco HQ: 600 employees\n- New York Office: 300 employees\n- London Office: 200 employees\n- Remote workers: 100 employees\n\n### Customer Base\n\n- Active Customers: 10,000+\n- Enterprise Clients: 250\n- Small-to-Medium Business: 3,500\n- Individual Users: 6,250+\n- Countries Served: 45\n\n### Financial Performance\n\n- Annual Revenue: $150M (2024)\n- Year-over-Year Growth: 35%\n- Customer Retention Rate: 94%\n- Net Promoter Score: 72\n\n### Product Adoption\n\n- ACME Analytics Users: 5,000+\n- ACME Cloud Customers: 3,500\n- Active Monthly Users: 8,500\n\n## Growth Trajectory\n\nACME has experienced consistent growth since our founding:\n\n### Historical Milestones\n\n- 1995-2000: Small startup, 5-50 employees\n- 2000-2010: Expansion phase, grew to 500 employees\n- 2010-2020: Maturation, reached 800 employees\n- 2020-2024: Accelerated growth, now at 1,200 employees\n\n### Future Projections\n\nBased on current growth rates, we project:\n- 2025: 1,500 employees\n- 2026: 2,000 employees\n- Customer base: 15,000+ by end of 2025"
+          }
+        }
+      ],
+      "model_response": {
+        "role": "model",
+        "content": "There are 300 employees who work in the New York office.\n\nSource: company-metrics.mdc",
+        "timestamp": "2026-01-14T22:40:25.669Z",
+        "metadata": {
+          "confidence": "high",
+          "reasoning": "Synthesized from document tools"
+        }
+      },
+      "turn_metadata": {
+        "total_duration_ms": 7028,
+        "tool_call_count": 3,
+        "token_usage": {
+          "prompt_tokens": 1906,
+          "completion_tokens": 24,
+          "total_tokens": 1975
+        }
+      }
+    }
+  ],
+  "conversation_metadata": {
+    "total_duration_ms": 19253,
+    "total_tokens": 5820,
+    "user_messages": 3,
+    "model_responses": 3,
+    "tool_invocations": 9,
+    "errors": []
+  }
+}

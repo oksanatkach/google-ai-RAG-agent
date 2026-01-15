@@ -1,0 +1,184 @@
+{
+  "conversation_id": "conv-1768430143072",
+  "created_at": "2026-01-14T22:35:43.085Z",
+  "updated_at": "2026-01-14T22:35:56.605Z",
+  "metadata": {
+    "agent_version": "1.0.0",
+    "model": "gemini-2.5-flash",
+    "total_turns": 2,
+    "total_tool_calls": 5
+  },
+  "turns": [
+    {
+      "turn_id": 0,
+      "timestamp": "2026-01-14T22:35:43.085Z",
+      "type": "system",
+      "message": {
+        "role": "model",
+        "content": "Hello! I'm the ACME Q&A Agent. I can help you find information about company policies, product metrics, security practices, and more. What would you like to know?"
+      }
+    },
+    {
+      "turn_id": 1768430144,
+      "timestamp": "2026-01-14T22:35:44.360Z",
+      "type": "user_query",
+      "user_message": {
+        "role": "user",
+        "content": "Tell me about your company history and current team size",
+        "timestamp": "2026-01-14T22:35:44.360Z"
+      },
+      "tool_invocations": [
+        {
+          "invocation_id": "tool-inv-1768430145920-456",
+          "sequence": 1,
+          "tool_name": "getTable",
+          "arguments": {},
+          "invoked_at": "2026-01-14T22:35:45.920Z",
+          "completed_at": "2026-01-14T22:35:46.462Z",
+          "duration_ms": 542,
+          "status": "success",
+          "result": {
+            "documents": [
+              {
+                "fileId": "company-overview.mdc",
+                "synopsis": "An introduction to ACME Corporation, our mission, vision, and values",
+                "path": "(root)"
+              },
+              {
+                "fileId": "engineering/best-practices.mdc",
+                "synopsis": "Engineering best practices and coding standards for ACME development teams",
+                "path": "engineering"
+              },
+              {
+                "fileId": "hr/onboarding.mdc",
+                "synopsis": "New employee onboarding process and welcome guide for ACME team members",
+                "path": "hr"
+              },
+              {
+                "fileId": "marketing/brand-guidelines.mdc",
+                "synopsis": "Brand identity guidelines and visual standards for ACME Corporation",
+                "path": "marketing"
+              },
+              {
+                "fileId": "products/acme-analytics.mdc",
+                "synopsis": "Comprehensive analytics platform for data-driven business decisions",
+                "path": "products"
+              },
+              {
+                "fileId": "products/acme-cloud.mdc",
+                "synopsis": "Scalable cloud infrastructure solutions for businesses of all sizes",
+                "path": "products"
+              },
+              {
+                "fileId": "security-guidelines.mdc",
+                "synopsis": "Security guidelines and best practices for ACME systems and applications",
+                "path": "(root)"
+              },
+              {
+                "fileId": "sales/sales-process.mdc",
+                "synopsis": "Standardized sales process and methodology for ACME sales team",
+                "path": "sales"
+              },
+              {
+                "fileId": "company-metrics.mdc",
+                "synopsis": "Current ACME Corporation metrics and statistics (2024)",
+                "path": "(root)"
+              },
+              {
+                "fileId": "support/troubleshooting-guide.mdc",
+                "synopsis": "Common issues and troubleshooting solutions for ACME products",
+                "path": "support"
+              }
+            ]
+          }
+        },
+        {
+          "invocation_id": "tool-inv-1768430148069-675",
+          "sequence": 2,
+          "tool_name": "getOutline",
+          "arguments": {
+            "id": "company-overview.mdc"
+          },
+          "invoked_at": "2026-01-14T22:35:48.069Z",
+          "completed_at": "2026-01-14T22:35:48.481Z",
+          "duration_ms": 411,
+          "status": "success",
+          "result": {
+            "outline": "# ACME Company Overview\n  ## Our Mission\n  ## Our Vision\n  ## Core Values\n    ### Innovation\n    ### Integrity\n    ### Excellence\n    ### Customer-Centric\n  ## Company History\n    ### The Early Years (1995-2000)\n    ### Growth Phase (2000-2010)\n    ### Modern Era (2010-Present)"
+          }
+        },
+        {
+          "invocation_id": "tool-inv-1768430149925-182",
+          "sequence": 3,
+          "tool_name": "getOutline",
+          "arguments": {
+            "id": "company-metrics.mdc"
+          },
+          "invoked_at": "2026-01-14T22:35:49.925Z",
+          "completed_at": "2026-01-14T22:35:50.291Z",
+          "duration_ms": 366,
+          "status": "success",
+          "result": {
+            "outline": "# ACME Company Metrics\n  ## Current Statistics (Q4 2024)\n    ### Team Size\n    ### Geographic Distribution\n    ### Customer Base\n    ### Financial Performance\n    ### Product Adoption\n  ## Growth Trajectory\n    ### Historical Milestones\n    ### Future Projections"
+          }
+        },
+        {
+          "invocation_id": "tool-inv-1768430151446-991",
+          "sequence": 4,
+          "tool_name": "getFull",
+          "arguments": {
+            "id": "company-overview.mdc"
+          },
+          "invoked_at": "2026-01-14T22:35:51.446Z",
+          "completed_at": "2026-01-14T22:35:51.855Z",
+          "duration_ms": 409,
+          "status": "success",
+          "result": {
+            "content": "# ACME Company Overview\n\nACME Corporation is a leading technology company specializing in innovative solutions for businesses worldwide.\n\n## Our Mission\n\nTo empower organizations with cutting-edge technology that transforms the way they work and achieve their goals.\n\n## Our Vision\n\nWe envision a future where technology seamlessly integrates into every aspect of business operations, making enterprises more efficient, productive, and successful.\n\n## Core Values\n\n### Innovation\n\nWe believe in pushing boundaries and exploring new possibilities in technology.\n\n### Integrity\n\nEthical business practices and transparency guide everything we do.\n\n### Excellence\n\nWe strive for the highest standards in all our products and services.\n\n### Customer-Centric\n\nOur customers' success is our success.\n\n## Company History\n\nACME was founded in 1995 with a simple mission: to make technology accessible and powerful for businesses of all sizes.\n\n### The Early Years (1995-2000)\n\nStarting with just five employees in a small office, we focused on delivering quality customer service.\n\n### Growth Phase (2000-2010)\n\nExpanded our product portfolio and grew to over 500 employees across multiple countries.\n\n### Modern Era (2010-Present)\n\nToday, ACME serves over 10,000 customers globally with innovative cloud-based solutions."
+          }
+        },
+        {
+          "invocation_id": "tool-inv-1768430152676-553",
+          "sequence": 5,
+          "tool_name": "getFull",
+          "arguments": {
+            "id": "company-metrics.mdc"
+          },
+          "invoked_at": "2026-01-14T22:35:52.676Z",
+          "completed_at": "2026-01-14T22:35:52.872Z",
+          "duration_ms": 197,
+          "status": "success",
+          "result": {
+            "content": "# ACME Company Metrics\n\n## Current Statistics (Q4 2024)\n\n### Team Size\n\nAs of Q4 2024, ACME has grown substantially:\n- Total Employees: 1,200\n- Engineering: 450\n- Sales: 200  \n- Support: 150\n- Marketing: 100\n- Operations: 150\n- Other departments: 150\n\n### Geographic Distribution\n\nOur team is spread across multiple locations:\n- San Francisco HQ: 600 employees\n- New York Office: 300 employees\n- London Office: 200 employees\n- Remote workers: 100 employees\n\n### Customer Base\n\n- Active Customers: 10,000+\n- Enterprise Clients: 250\n- Small-to-Medium Business: 3,500\n- Individual Users: 6,250+\n- Countries Served: 45\n\n### Financial Performance\n\n- Annual Revenue: $150M (2024)\n- Year-over-Year Growth: 35%\n- Customer Retention Rate: 94%\n- Net Promoter Score: 72\n\n### Product Adoption\n\n- ACME Analytics Users: 5,000+\n- ACME Cloud Customers: 3,500\n- Active Monthly Users: 8,500\n\n## Growth Trajectory\n\nACME has experienced consistent growth since our founding:\n\n### Historical Milestones\n\n- 1995-2000: Small startup, 5-50 employees\n- 2000-2010: Expansion phase, grew to 500 employees\n- 2010-2020: Maturation, reached 800 employees\n- 2020-2024: Accelerated growth, now at 1,200 employees\n\n### Future Projections\n\nBased on current growth rates, we project:\n- 2025: 1,500 employees\n- 2026: 2,000 employees\n- Customer base: 15,000+ by end of 2025"
+          }
+        }
+      ],
+      "model_response": {
+        "role": "model",
+        "content": "ACME Corporation was founded in 1995 with the mission to make technology accessible and powerful for businesses. In its early years (1995-2000), the company started with just five employees and focused on customer service. During the growth phase (2000-2010), ACME expanded its product portfolio and grew to over 500 employees across multiple countries. In the modern era (2010-Present), ACME serves over 10,000 customers globally with innovative cloud-based solutions.\n\nAs of Q4 2024, ACME has a total of 1,200 employees, broken down by department as follows:\n*   Engineering: 450 employees\n*   Sales: 200 employees\n*   Support: 150 employees\n*   Marketing: 100 employees\n*   Operations: 150 employees\n*   Other departments: 150 employees\n\nSources: company-overview.mdc, company-metrics.mdc",
+        "timestamp": "2026-01-14T22:35:55.318Z",
+        "metadata": {
+          "confidence": "high",
+          "reasoning": "Synthesized from document tools"
+        }
+      },
+      "turn_metadata": {
+        "total_duration_ms": 10958,
+        "tool_call_count": 5,
+        "token_usage": {
+          "prompt_tokens": 2315,
+          "completion_tokens": 226,
+          "total_tokens": 2783
+        }
+      }
+    }
+  ],
+  "conversation_metadata": {
+    "total_duration_ms": 10958,
+    "total_tokens": 2783,
+    "user_messages": 1,
+    "model_responses": 1,
+    "tool_invocations": 5,
+    "errors": []
+  }
+}
